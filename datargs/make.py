@@ -125,7 +125,7 @@ AddArgFunc = Callable[[RecordField, dict], Action]
 def field_name_to_arg_name(name: str, positional=False) -> str:
     if positional:
         return name
-    return f"--{name.replace('_','-')}"
+    return f"--{name}"
 
 
 SpecialRule = Callable[[Type["TypeDispatch"], RecordField], Optional[Action]]
